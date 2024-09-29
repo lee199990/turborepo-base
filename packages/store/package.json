@@ -1,0 +1,27 @@
+{
+  "name": "@jmrepo/store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "files": [
+    "lib/*"
+  ],
+  "publishConfig": {
+    "registry": "http://nexus.jinma.tech/repository/npm-jm/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@jmrepo/http": "workspace:*",
+    "@jmrepo/tsconfig": "workspace:*",
+    "@jmrepo/eslint-config": "workspace:*"
+  },
+  "dependencies": {
+    "redux-persist": "^6.0.0"
+  }
+}

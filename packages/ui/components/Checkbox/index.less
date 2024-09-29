@@ -1,0 +1,19 @@
+@import "../../style/index.less";
+
+.l-checkbox {
+  /** hover颜色 */
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner {
+    border-color: @theme-color-button;
+  }
+
+  /** 选中颜色 */
+  .ant-checkbox-checked .ant-checkbox-inner {
+    border-color: @theme-color-button;
+    background-color: @theme-color-button;
+  }
+
+  .ant-checkbox-checked::after {
+    border-color: @theme-color-button;
+  }
+}

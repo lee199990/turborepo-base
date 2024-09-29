@@ -1,0 +1,21 @@
+@import "../../style/index.less";
+
+.l-radio {
+  /** 选中边框颜色 */
+  .ant-radio-checked {
+    &::after,
+    .ant-radio-inner {
+      border: 1px solid @theme-color-button;
+    }
+  }
+
+  /** 选中填充颜色 */
+  .ant-radio-inner::after {
+    .theme-color-button;
+  }
+
+  /** 悬浮填充颜色 */
+  .ant-radio:hover .ant-radio-inner {
+    border-color: @theme-color-button;
+  }
+}

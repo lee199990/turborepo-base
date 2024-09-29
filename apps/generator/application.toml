@@ -1,0 +1,23 @@
+template = "./template"
+
+[app]
+path = "/apps"
+eslintrc = ".eslintrc.yaml"
+tsconfig = "tsconfig.json"
+
+[app.component]
+dir = "components"
+file_name = "index"
+
+[lib]
+path = "/packages"
+version = "workspace:*"
+
+#[util]
+#
+#[util.store.global]
+#file = "store.ts"
+#slice_var = "slice"
+#[util.store.app]
+#file = "index.ts"
+#slice_var = "slice"

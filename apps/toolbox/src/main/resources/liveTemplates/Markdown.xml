@@ -1,0 +1,22 @@
+<templateSet group="Markdown">
+    <template name="line"
+              value="const [$TEXT$, set$TEXT$] = useState('');$END$"
+              description="SDK: New link reference"
+              toReformat="false"
+              toShortenFQNames="false">
+        <variable name="TEXT" expression="complete()" defaultValue="name" alwaysStopAt="true"/>
+        <context>
+            <option name="MARKDOWN" value="true"/>
+        </context>
+    </template>
+    <template name="mc"
+              value="$TITLE$"
+              description="SDK: Convert to title case"
+              toReformat="true"
+              toShortenFQNames="false">
+        <variable name="TITLE" expression="titleCase(SELECTION)" defaultValue="the quick brown fox" alwaysStopAt="true" />
+        <context>
+            <option name="MARKDOWN" value="true" />
+        </context>
+    </template>
+</templateSet>

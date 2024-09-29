@@ -1,0 +1,80 @@
+@import "../../style/index.less";
+
+.l-button {
+  .ant-btn {
+    .rounded-4;
+    /** 主题 */
+    &.-theme {
+      background-color: @theme-color-button;
+      color: #fff;
+
+      &:hover {
+        filter: contrast(80%);
+        border-color: @theme-color-button;
+      }
+
+      &:focus {
+        border-color: @theme-color-button;
+      }
+
+      &:active {
+        filter: contrast(120%);
+        border-color: @theme-color-button;
+      }
+    }
+
+    /** 默认 */
+    &.-default {
+      background-color: #fff;
+      color: @text-color-main;
+
+      &:hover {
+        filter: contrast(95%);
+        border-color: @text-color-invalid;
+      }
+
+      &:focus {
+        border-color: @text-color-invalid;
+      }
+
+      &:active {
+        filter: contrast(100%);
+        border-color: @text-color-invalid;
+      }
+    }
+
+    /** 禁用 */
+    &.-disabled {
+      background-color: @text-color-invalid;
+      color: #fff;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: none;
+      }
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    /** 大 */
+    &.-large {
+      width: 104px;
+      height: 40px;
+    }
+
+    /** 中 */
+    &.-middle {
+      width: 88px;
+      height: 32px;
+    }
+
+    /** 小 */
+    &.-small {
+      width: 72px;
+      height: 24px;
+    }
+  }
+}

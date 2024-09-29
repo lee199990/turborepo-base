@@ -1,0 +1,35 @@
+{
+  "name": "@jmrepo/$name$k",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "author": "",
+  "keywords": [],
+  "sideEffects": false,
+  "main": "lib/index.ts",
+  "module": "lib/index.ts",
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {
+    "cy:open": "cypress open --e2e --browser chrome",
+    "test": "cypress run --component",
+    "coverage": "nyc report --reporter=text-summary",
+    "coverage-view": "@powershell ../../bin/open.ps1 -url ./coverage/lcov-report/index.html",
+    "report": "@powershell ../../bin/open.ps1 -url ./cypress/reports/index.html",
+    "build": "vite build",
+    "prepublish": "pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@jmrepo/runtime": "workspace:*",
+    "@jmrepo/tsconfig": "workspace:*",
+    "cypress-mochawesome-reporter": "^3.8.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

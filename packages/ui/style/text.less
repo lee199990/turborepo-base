@@ -1,0 +1,133 @@
+/*
+//////////////////////////////
+/// 「 文本对齐方式 」           
+//////////////////////////////
+*/
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-break {
+  word-break: break-all;
+}
+.text-indent {
+  text-indent: 2em;
+}
+
+/*
+//////////////////////////////
+/// 「 文本显示行数 」           
+//////////////////////////////
+*/
+.line-clamp(@i,@return) when (@i <= @return) {
+  .line-clamp-@{i} {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @i;
+    overflow: hidden;
+  }
+
+  .line-clamp(@i + 1, @return); // 递归调用自身
+}
+
+.line-clamp(1,5);
+
+/*
+//////////////////////////////
+/// 「 装饰线 」           
+//////////////////////////////
+*/
+
+.under-line {
+  text-decoration: underline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+/*
+//////////////////////////////
+/// 「 文本不可选中 」           
+//////////////////////////////
+*/
+
+.text-select {
+  user-select: none;
+}
+
+/*
+//////////////////////////////
+/// 「 字符间距 」           
+//////////////////////////////
+*/
+.ls-1 {
+  letter-spacing: 1px;
+}
+.ls-2 {
+  letter-spacing: 2px;
+}
+.ls-3 {
+  letter-spacing: 3px;
+}
+
+/*
+//////////////////////////////
+/// 「 字体相关 」           
+//////////////////////////////
+*/
+.font-weight(@i,@return) when (@i <= @return) {
+  .f-@{i} {
+    font-weight: @i;
+  }
+
+  .font-weight(@i + 100, @return); // 递归调用自身
+}
+
+.font-weight(0,1000);
+
+.font-size(@i,@return) when (@i <= @return) {
+  .f@{i} {
+    font-size: unit(@i, px);
+  }
+
+  .font-size(@i + 1, @return); // 递归调用自身
+}
+
+.font-size(0,50);
+
+
+/*
+//////////////////////////////
+/// 「 颜色相关 」           
+//////////////////////////////
+*/
+.color-FFFFFF {
+  color: #ffffff;
+}
+.color-999999 {
+  color: #999999;
+}
+.color-333333 {
+  color: #333333;
+}
+.color-666666 {
+  color: #666666;
+}
+.color-888888 {
+  color: #888888;
+}
+.color-C5C5C5 {
+  color: #c5c5c5;
+}
+.color-458EDB {
+  color: #458edb;
+}
+.color-FF6524 {
+  color: #ff6524;
+}

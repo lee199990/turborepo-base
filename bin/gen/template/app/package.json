@@ -1,0 +1,27 @@
+{
+  "name": "$name$k",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 5",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@jmrepo/http": "workspace:*",
+    "@jmrepo/store": "workspace:*"
+  },
+  "devDependencies": {
+    "@jmrepo/runtime": "workspace:*",
+    "@jmrepo/tsconfig": "workspace:*",
+    "@jmrepo/eslint-config": "workspace:*"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

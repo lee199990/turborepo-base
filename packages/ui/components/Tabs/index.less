@@ -1,0 +1,52 @@
+@import "../../style/index.less";
+
+.l-tabs {
+  // 卡片类型 样式
+  > .card {
+    // 清除tabs的下边距
+    .m-0;
+
+    // tabs
+    .ant-tabs-tab {
+      width: 104px;
+      .border-0;
+      .justify-content-center;
+
+      &:first-child {
+        margin-left: 0 !important;
+      }
+
+      .ant-tabs-tab-btn {
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    // 选中时的tabs样式
+    .ant-tabs-tab-active {
+      // 字体样式
+      .ant-tabs-tab-btn {
+        border-bottom-color: @theme-color-button;
+      }
+    }
+  }
+  // line 类型 样式 - 默认
+  > .line {
+    // 清除tabs的下边距
+    .m-0;
+
+    // tabs
+    .ant-tabs-tab {
+      // width: 104px;
+      margin-left: 32px !important;
+      .border-0;
+
+      &:first-child {
+        margin-left: 0 !important;
+      }
+
+      .ant-tabs-tab-btn {
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+}

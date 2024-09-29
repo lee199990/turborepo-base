@@ -1,0 +1,152 @@
+/*
+//////////////////////////////
+/// 「 内边距 」           
+//////////////////////////////
+*/
+.p(@i,@return) when (@i <= @return) {
+  .p-@{i} {
+    padding-top: unit(@i, px);
+    padding-right: unit(@i, px);
+    padding-bottom: unit(@i, px);
+    padding-left: unit(@i, px);
+  }
+
+  .p(@i + 1, @return); // 递归调用自身
+}
+
+.pt(@i,@return) when (@i <= @return) {
+  .pt-@{i} {
+    padding-top: unit(@i, px);
+  }
+
+  .pt(@i + 1, @return); // 递归调用自身
+}
+
+.pr(@i,@return) when (@i <= @return) {
+  .pr-@{i} {
+    padding-right: unit(@i, px);
+  }
+
+  .pr(@i + 1, @return); // 递归调用自身
+}
+
+.pb(@i,@return) when (@i <= @return) {
+  .pb-@{i} {
+    padding-bottom: unit(@i, px);
+  }
+
+  .pb(@i + 1, @return); // 递归调用自身
+}
+
+.pl(@i,@return) when (@i <= @return) {
+  .pl-@{i} {
+    padding-left: unit(@i, px);
+  }
+
+  .pl(@i + 1, @return); // 递归调用自身
+}
+
+.px(@i,@return) when (@i <= @return) {
+  .px-@{i} {
+    padding-left: unit(@i, px);
+    padding-right: unit(@i, px);
+  }
+
+  .px(@i + 1, @return); // 递归调用自身
+}
+
+.py(@i,@return) when (@i <= @return) {
+  .py-@{i} {
+    padding-top: unit(@i, px);
+    padding-bottom: unit(@i, px);
+  }
+
+  .py(@i + 1, @return); // 递归调用自身
+}
+
+.p(0, 100);
+.pt(0, 100);
+.pr(0, 100);
+.pb(0, 100);
+.pl(0, 100);
+.px(0, 100);
+.py(0, 100);
+
+/*
+//////////////////////////////
+/// 「 外边距 」           
+//////////////////////////////
+*/
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m(@i,@return) when (@i <= @return) {
+  .m-@{i} {
+    margin-top: unit(@i, px);
+    margin-right: unit(@i, px);
+    margin-bottom: unit(@i, px);
+    margin-left: unit(@i, px);
+  }
+
+  .m(@i + 1, @return); // 递归调用自身
+}
+
+.mt(@i,@return) when (@i <= @return) {
+  .mt-@{i} {
+    margin-top: unit(@i, px);
+  }
+
+  .mt(@i + 1, @return); // 递归调用自身
+}
+
+.mr(@i,@return) when (@i <= @return) {
+  .mr-@{i} {
+    margin-right: unit(@i, px);
+  }
+
+  .mr(@i + 1, @return); // 递归调用自身
+}
+
+.mb(@i,@return) when (@i <= @return) {
+  .mb-@{i} {
+    margin-bottom: unit(@i, px);
+  }
+
+  .mb(@i + 1, @return); // 递归调用自身
+}
+
+.ml(@i,@return) when (@i <= @return) {
+  .ml-@{i} {
+    margin-left: unit(@i, px);
+  }
+
+  .ml(@i + 1, @return); // 递归调用自身
+}
+
+.mx(@i,@return) when (@i <= @return) {
+  .mx-@{i} {
+    margin-left: unit(@i, px);
+    margin-right: unit(@i, px);
+  }
+
+  .mx(@i + 1, @return); // 递归调用自身
+}
+
+.my(@i,@return) when (@i <= @return) {
+  .my-@{i} {
+    margin-top: unit(@i, px);
+    margin-bottom: unit(@i, px);
+  }
+
+  .my(@i + 1, @return); // 递归调用自身
+}
+
+.m(0, 100);
+.mt(0, 100);
+.mr(0, 100);
+.mb(0, 100);
+.ml(0, 100);
+.mx(0, 100);
+.my(0, 100);

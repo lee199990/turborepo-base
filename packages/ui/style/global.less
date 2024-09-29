@@ -1,0 +1,197 @@
+/*
+//////////////////////////////
+/// 「 以下为默认样式 」           
+//////////////////////////////
+*/
+html,
+body,
+#root-master {
+  min-width: 1200px;
+  height: 100%;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.component {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+*,
+p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+/*
+//////////////////////////////
+/// 「盒子模型 」           
+//////////////////////////////
+*/
+
+.bs-c {
+  box-sizing: content-box;
+}
+.bs-b {
+  box-sizing: border-box;
+}
+
+.bg-FFFFFF {
+  background-color: #ffffff;
+}
+.bg-F5F5F5 {
+  background-color: #f5f5f5;
+}
+.bg-FAFAFA {
+  background-color: #fafafa;
+}
+.bg-EEEEEE {
+  background-color: #eeeeee;
+}
+.bg-999999 {
+  background-color: #999999;
+}
+.bg-333333 {
+  background-color: #333333;
+}
+.bg-000000 {
+  background-color: #000000;
+}
+.bg-373C3C {
+  background-color: #373c3c;
+}
+.bg-458EDB {
+  background-color: #458edb;
+}
+.bg-CEB379 {
+  background-color: #fcaa30;
+}
+.bg-FF6524 {
+  background-color: #ff6524;
+}
+
+/*
+//////////////////////////////
+/// 「 尺寸相关 」           
+//////////////////////////////
+*/
+
+.w-auto {
+  width: auto;
+}
+
+.width(@i,@return) when (@i <= @return) {
+  .w-@{i} {
+    width: @i * 1%;
+  }
+
+  .w@{i} {
+    width: unit(@i, px);
+  }
+
+  .width(@i + 1, @return); // 递归调用自身
+}
+
+.width(0,100);
+
+.height(@i,@return) when (@i <= @return) {
+  .h-@{i} {
+    height: @i * 1%;
+  }
+
+  .h@{i} {
+    height: unit(@i, px);
+  }
+
+  .height(@i + 1, @return); // 递归调用自身
+}
+
+.height(0,100);
+
+.h-auto {
+  height: auto;
+}
+
+.h-min-100 {
+  min-height: 100%;
+}
+
+/*
+//////////////////////////////
+/// 「 icon尺寸 」           
+//////////////////////////////
+*/
+.icon(@i,@return) when (@i <= @return) {
+  .icon-@{i}x@{i} {
+    width: unit(@i, px);
+    height: unit(@i, px);
+  }
+
+  .icon(@i + 1, @return); // 递归调用自身
+}
+
+.icon(0, 100);
+
+/*
+//////////////////////////////
+/// 「 行高 」           
+//////////////////////////////
+*/
+
+.lh(@i,@return) when (@i <= @return) {
+  .lh-@{i} {
+    line-height: unit(@i, px);
+  }
+
+  .lh(@i + 1, @return); // 递归调用自身
+}
+
+.lh(0,100);
+
+/*
+//////////////////////////////
+/// 「 透明度 」           
+//////////////////////////////
+*/
+
+.opacity(@i,@return) when (@i <= @return) {
+  .opacity-@{i} {
+    opacity: @i * 1%;
+  }
+
+  .opacity(@i + 1, @return); // 递归调用自身
+}
+
+.opacity(0,100);
+
+/** 星号 */
+.star {
+  &::before {
+    display: inline-block;
+    content: "*";
+    color: red;
+    margin-right: 4px;
+  }
+}
+
+/*
+//////////////////////////////
+/// 「 光标 」           
+//////////////////////////////
+*/
+.cursor-pointer {
+  cursor: pointer;
+}

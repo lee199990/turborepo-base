@@ -1,0 +1,21 @@
+{
+  "name": "@jmrepo/runtime",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.ts",
+  "files": [
+    "lib/*"
+  ],
+  "publishConfig": {
+    "registry": "http://nexus.jinma.tech/repository/npm-jm/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@jmrepo/tsconfig": "workspace:*"
+  }
+}

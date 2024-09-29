@@ -1,0 +1,19 @@
+@import "../../style/index.less";
+
+.l-input {
+  .ant-input {
+    border-radius: 4px;
+    &:hover {
+      border-color: @theme-color-suspend;
+    }
+
+    &:focus {
+      border-color: @theme-color-suspend;
+      box-shadow: none;
+    }
+  }
+
+  .error {
+    top: 100% + 4px;
+  }
+}

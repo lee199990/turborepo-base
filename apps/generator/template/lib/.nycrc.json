@@ -1,0 +1,19 @@
+{
+    "all": true,
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "check-coverage": true,
+    "excludeAfterRemap": false,
+    "include": [
+        "lib/*.ts",
+        "lib/**/*.ts",
+        "lib/**/*.tsx"
+    ],
+    "exclude": [
+        "dist/*",
+        "coverage/*",
+        "cypress/**/*.*",
+        "**/*.d.ts",
+        "**/*.cy.tsx",
+        "**/*.cy.ts"
+    ]
+}

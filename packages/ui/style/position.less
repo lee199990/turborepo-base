@@ -1,0 +1,139 @@
+
+/*
+//////////////////////////////
+/// 「 定位 」           
+//////////////////////////////
+*/
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-fixed {
+  position: fixed;
+}
+.position-stickily {
+  position: sticky;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.absolute-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.absolute-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.absolute-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.absolute-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.absolute-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.absolute-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.absolute-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.t(@i,@return) when (@i <= @return) {
+  .t-@{i} {
+    top: unit(@i, px);
+  }
+
+  .t(@i + 1, @return); // 递归调用自身
+}
+
+.t(-100,100);
+
+.r(@i,@return) when (@i <= @return) {
+  .r-@{i} {
+    right: unit(@i, px);
+  }
+
+  .r(@i + 1, @return); // 递归调用自身
+}
+
+.r(-100,100);
+
+.b(@i,@return) when (@i <= @return) {
+  .b-@{i} {
+    bottom: unit(@i, px);
+  }
+
+  .b(@i + 1, @return); // 递归调用自身
+}
+
+.b(-100,100);
+
+.l(@i,@return) when (@i <= @return) {
+  .l-@{i} {
+    left: unit(@i, px);
+  }
+
+  .l(@i + 1, @return); // 递归调用自身
+}
+
+.l(-100,100);
+
+.z(@i,@return) when (@i <= @return) {
+  .z-@{i} {
+    z-index: @i; /*这里是给chrome用的*/
+    // transform: translateZ(unit(@i, px)); /*这里是给safari用的*/
+  }
+
+  .z(@i + 1, @return); // 递归调用自身
+}
+
+.z(-100,100);

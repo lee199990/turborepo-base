@@ -1,0 +1,18 @@
+@import "../../style/index.less";
+
+.l-toast {
+  .ant-btn:hover {
+    .text-color-button;
+    border-color: @theme-color-button;
+  }
+
+  /** ok按钮 */
+  .ant-btn-primary {
+    background: @theme-color-button !important;
+    border-color: @theme-color-button !important;
+    &:hover {
+      .theme-color-button;
+      color: #fff;
+    }
+  }
+}

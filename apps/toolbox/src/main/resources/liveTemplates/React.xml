@@ -1,0 +1,115 @@
+<templateSet group="React">
+    <template name=":state" value="const [$NAME$, set$NAME_CAP$] = useState&lt;$TYPE$&gt;($DEFAULT$);$END$"
+              description="Create a useState hook with options"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+        <variable name="NAME_CAP" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+        <variable name="DEFAULT" expression="enum(&quot;''&quot;, &quot;true&quot;, &quot;false&quot;, &quot;null&quot;)" defaultValue="&quot;''&quot;" alwaysStopAt="true" />
+        <variable name="TYPE" expression="groovyScript(&quot;_1.equals('true') || _1.equals('false') ? 'boolean' : (_1.equals('null') ? 'string | null' :'string')&quot;, DEFAULT)" defaultValue="" alwaysStopAt="false"/>
+        <context>
+            <option name="React" value="true"/>
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":ecmp" value="const $NAME$: FC = () =&gt; {&#10;    return (&#10;        &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $NAME$" description="默认导出的jsx组件" toReformat="false" toShortenFQNames="true">
+        <variable name="NAME" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TSX" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+        </context>
+    </template>
+    <template name=":effect" value="useEffect(() =&gt; {&#10;    $END$&#10;    return () =&gt; {&#10;        // 组件卸载销毁&#10;    };&#10;}, [$VAR$]);" toReformat="false" toShortenFQNames="true">
+        <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="TypeScript" value="true" />
+        </context>
+    </template>
+    <template name=":ref" value="const $ref$ = useRef($END$);" description="const ref = useRef(initialValue)" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+        <variable name="ref" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":fcc" value="import { useEffect } from 'react';&#10;const $NAME$: React.FC = () =&gt; {&#10;    useEffect(() =&gt; {}, []);&#10;&#10;    return (&#10;      &lt;div className=&quot;xxx-warp&quot;&gt;$END$&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $NAME$;" description="创建函数组件(携带useEffect)" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="创建函数组件(携带useEffect)" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":btn" value="&lt;button type=&quot;&quot;  size=&quot;&quot; onClick={() =&gt; {}&gt; $END$ &lt;/button&gt;" description="普通按钮 + 点击事件" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":get" value="const [$RES$]: any = await xxx.Get('url');&#10;if ($RES$) { &#10;    $END$&#10;}" description="GET请求接口，获取结果数据" toReformat="false" toShortenFQNames="true">
+        <variable name="RES" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":post" value="const [$RES$]: any = await xxx.Post('url', {});&#10;if ($RES$) { &#10;    $END$&#10;}" description="POST请求接口，获取结果数据" toReformat="true" toShortenFQNames="true">
+        <variable name="RES" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+
+        </context>
+    </template>
+    <template name=":delete" value="const [$RES$]: any = await xxx.Delete('');&#10;if ($RES$) { &#10;    $END$&#10;}" description="DELETE请求接口，获取结果数据" toReformat="true" toShortenFQNames="true">
+        <variable name="RES" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":arrow" value="const $FUN$ = () =&gt; {  &#10;    $END$&#10;  };  " description="创建箭头函数" toReformat="true" toShortenFQNames="true">
+        <variable name="FUN" expression="函数名字" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TSX" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+        </context>
+    </template>
+    <template name=":fbtn" value="const $NAME$ = () =&gt; {  &#10;  const $FUNCTIONNAME$ = () =&gt; {  &#10;        $END$&#10;  }  &#10;  return (  &#10;    &lt;div&gt;  &#10;      &lt;button onClick={$FUNCTIONNAME$}&gt; $END$ &lt;/button&gt;  &#10;    &lt;/div&gt;  &#10;  );  &#10;}  &#10;  &#10;export default $NAME$;" description="函数组件+标签点击事件" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="FUNCTIONNAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="TSX" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":lazy" value="const $NAME$ = lazy(() =&gt; import('$END$')); " description="引入组件（懒加载方式）" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":switch" value="switch case(){&#10;    case $END$:&#10;        break;&#10;    case $END$:&#10;        break;&#10;    case $END$:&#10;        break;&#10;    default:&#10;        $END$;&#10;    &#10;}" description="switch分支语句" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+    <template name=":arr" value="{&#10;    xxx.map(item=&gt;{&#10;        return $END$&#10;    })&#10;}" description="遍历数组" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="React" value="true" />
+            <option name="TYPESCRIPT" value="true" />
+            <option name="TSX" value="true" />
+        </context>
+    </template>
+</templateSet>

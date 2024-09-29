@@ -1,0 +1,33 @@
+{
+  "name": "@jmrepo/utils",
+  "version": "1.1.3",
+  "description": "基础工具代码库",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dist/*"
+  ],
+  "publishConfig": {
+    "registry": "http://nexus.jinma.tech/repository/npm-jm/"
+  },
+  "scripts": {
+    "cy:open": "cypress open --component --browser chrome",
+    "test": "cypress run --component",
+    "coverage": "nyc report --reporter=text-summary",
+    "coverage-view": "@powershell ../../bin/open.ps1 -url ./coverage/lcov-report/index.html",
+    "report": "@powershell ../../bin/open.ps1 -url ./cypress/reports/index.html",
+    "build": "vite build",
+    "prepublish": "pnpm test && pnpm build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@jmrepo/runtime": "workspace:*",
+    "@jmrepo/tsconfig": "workspace:*",
+    "cypress-mochawesome-reporter": "^3.8.0"
+  }
+}

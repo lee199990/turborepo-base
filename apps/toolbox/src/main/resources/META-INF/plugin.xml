@@ -1,0 +1,37 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>crescent.toolbox</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Toolbox</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="xs.li1994@outlook.com" url="https://www.yourcompany.com">crescent</vendor>
+
+    <!--插件的介绍-->
+    <description>
+        <![CDATA[
+            适用于IDEA的前端工具箱，提供代码，组件以及模板的快速创建。
+            详细请访问 <a href="https://www.yuque.com/u32025933/xrt2zf/qpd8qw5cy49t8eq3">说明文档</a>
+        ]]>
+    </description>
+
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/liveTemplates/Markdown.xml"/>
+        <!--        contextId 为文件的上下文类型-->
+        <liveTemplateContext implementation="crescent.toolbox.live.MarkdownContext" contextId="MARKDOWN"/>
+
+        <defaultLiveTemplates file="/liveTemplates/React.xml"/>
+        <liveTemplateContext implementation="crescent.toolbox.live.ReactContext" contextId="React"/>
+    </extensions>
+
+</idea-plugin>

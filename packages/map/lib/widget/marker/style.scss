@@ -1,0 +1,38 @@
+.marker-wrap {
+    width: 100%;
+    height: 100%;
+    //background-color: white;
+    //box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    //overflow: hidden;
+    cursor: pointer;
+    img {
+        //border: 2px solid transparent;
+        //border-radius: 50%;
+        user-select: none;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+.marker-bottom {
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(45deg);
+    position: absolute;
+
+    img {
+        transform: rotate(-45deg);
+    }
+}
+
+.marker-center {
+    border-radius: 50%;
+}
+
+.marker-only-img {
+    box-shadow: none;
+    overflow: initial;
+    img {
+        border-radius: 0;
+        border: 0;
+    }
+}

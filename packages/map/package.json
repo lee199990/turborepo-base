@@ -1,0 +1,38 @@
+{
+  "name": "@jmrepo/gismap",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "",
+  "author": "",
+  "keywords": [
+    "map"
+  ],
+  "main": "./lib/index.ts",
+  "module": "./lib/index.ts",
+  "files": [
+    "dist/*",
+    "lib/*"
+  ],
+  "publishConfig": {
+    "registry": "http://nexus.jinma.tech/repository/npm-jm/"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "build": "vite build",
+    "prepublish": "pnpm test && pnpm build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-draw": "^1.4.3",
+    "maplibre-gl": "^3.6.2",
+    "ol": "^8.2.0"
+  },
+  "devDependencies": {
+    "@jmrepo/http": "workspace:*",
+    "@jmrepo/tsconfig": "workspace:*",
+    "@jmrepo/utils": "workspace:*",
+    "@types/mapbox__mapbox-gl-draw": "^1.4.6"
+  }
+}

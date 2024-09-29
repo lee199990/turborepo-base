@@ -1,0 +1,4 @@
+.'$name$k-box' {
+    // 尽量使用全局变量，/packages/shared-styles/variable.scss 会自动注入到全局的sass文件中
+    padding: map-get($padding, master)
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@jmrepo/ui",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "files": [
+    "lib/*"
+  ],
+  "publishConfig": {
+    "registry": "http://nexus.jinma.tech/repository/npm-jm/"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "generate:component": "turbo gen react-component",
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.12",
+    "@types/node": "^20.5.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/classnames": "^2.2.11",
+    "ahooks": "^2.10.6",
+    "@jmrepo/tsconfig": "workspace:*",
+    "l-browser-storage": "^1.1.0",
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0"
+  }
+}

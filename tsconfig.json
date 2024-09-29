@@ -1,0 +1,3 @@
+{
+  "extends": "@jmrepo/tsconfig/base.json"
+}

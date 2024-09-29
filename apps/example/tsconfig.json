@@ -1,0 +1,18 @@
+{
+    "extends": "@jmrepo/tsconfig/base.json",
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

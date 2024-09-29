@@ -1,0 +1,31 @@
+//全局变量
+$font-size: 16px;
+$navBarHeight: 60px;
+$toolBarHeight: 55px;
+
+$padding: (
+        master: 16px,
+        page: $navBarHeight + 16px 16px 36px 16px,
+);
+
+$transition: (
+        fast: 150ms,
+        normal: 300ms,
+        large: 500ms
+);
+
+$level: (
+        max: 10,
+        float: 9,
+        notice: 8,
+        tip: 7,
+        dialog: 6,
+        height: 5
+);
+
+$radius: (
+        panel: 0,
+        component: 20px
+);
+
+$component-radius: 20px;

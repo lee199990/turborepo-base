@@ -1,0 +1,226 @@
+/*
+//////////////////////////////
+/// 「 布局 」
+/////////////////////////////
+*/
+
+/** 头部高度 */
+// @head-max-height: 48px;
+// @head-min-height: 48px;
+.head-height {
+  min-height: @head-min-height;
+  max-height: @head-max-height;
+}
+
+/** 内容宽度 */
+// @main-max-width: 1612px;
+// @main-min-width: 1136px;
+.main-width {
+  min-width: @main-min-width;
+}
+
+/** 侧边宽度 */
+// @sidebar-max-width: 200px;
+// @sidebar-min-width: 200px;
+.sidebar-width {
+  min-width: @sidebar-min-width;
+  max-width: @sidebar-max-width;
+}
+
+/** 面包屑最小高度 */
+// @breadcrumb-max-height: 40px;
+// @breadcrumb-min-height: 40px;
+.breadcrumb-height {
+  min-height: @breadcrumb-min-height;
+  max-height: @breadcrumb-max-height;
+}
+
+/*
+//////////////////////////////
+/// 「 UI颜色 」           
+//////////////////////////////
+*/
+
+/** 头部导航背景 */
+// '@theme-color-header-nav': '#120338',
+.theme-color-header-nav {
+  background-color: @theme-color-header-nav;
+}
+.text-color-header-nav {
+  color: @theme-color-header-nav;
+}
+
+/** 主题按钮颜色 */
+// '@theme-color-button': '#030852',
+.theme-color-button {
+  background-color: @theme-color-button;
+}
+.text-color-button {
+  color: @theme-color-button;
+}
+
+/** 悬停 */
+// '@theme-color-suspend': '#1D2164',
+.theme-color-suspend {
+  background-color: @theme-color-suspend;
+}
+
+/** 下拉背景 */
+// @theme-color-nav: #c7d1e6;
+.theme-color-dropdown {
+  background-color: @theme-color-dropdown;
+}
+
+/** 内容 */
+// @bg-color-content: #ffffff;
+.bg-color-content {
+  background-color: @bg-color-content;
+}
+
+/** 底部 */
+// @bg-color-foot: #f1f1f1;
+.bg-color-foot {
+  background-color: @bg-color-foot;
+}
+
+/** 禁用输入框背景 */
+// @bg-color-input: #f5f5f5;
+.bg-color-input {
+  background-color: @bg-color-input;
+}
+
+/** 表头背景 */
+// @bg-color-tabel: #ddebf9;
+.bg-color-tabel {
+  background-color: @bg-color-tabel;
+}
+
+/** 普通文本 */
+// @text-color-content: #333333;
+.text-color-content {
+  color: @text-color-content;
+}
+
+/** 主要文本 */
+// @text-color-main: #666666;
+.text-color-main {
+  color: @text-color-main;
+}
+
+/** 次要文本 */
+// @text-color-minor: #999999;
+.text-color-minor {
+  color: @text-color-minor;
+}
+
+/** 失效文本 */
+// @text-color-invalid: #d9d9d9;
+.text-color-invalid {
+  color: @text-color-invalid;
+}
+.bg-color-invalid {
+  color: @text-color-invalid;
+}
+
+/** 主要-正常 */
+// @func-color-primary: #1890ff;
+.func-color-primary {
+  background-color: @func-color-primary;
+}
+.color-primary {
+  color: @func-color-primary;
+}
+
+/** 主要-浅色 */
+// @func-color-primary-light: #91d5ff;
+.func-color-primary-light {
+  background-color: @func-color-primary-light;
+}
+
+/** 主要-淡色 */
+// @func-color-primary-pale: #e6f7ff;
+.func-color-primary-pale {
+  background-color: @func-color-primary-pale;
+}
+
+/** 成功-正常 */
+// @func-color-success: #52c41a;
+.func-color-success {
+  background-color: @func-color-success;
+}
+
+/** 成功-浅色 */
+// @func-color-success-light: #b7eb8f;
+.func-color-success-light {
+  background-color: @func-color-success-light;
+}
+
+/** 成功-淡色 */
+// @func-color-success-pale: #f6ffed;
+.func-color-success-pale {
+  background-color: @func-color-success-pale;
+}
+
+/** 警告-正常 */
+// @func-color-warn: #faad14;
+.func-color-warn {
+  background-color: @func-color-warn;
+}
+
+/** 警告-浅色 */
+// @func-color-warn-light: #ffe58f;
+.func-color-warn-light {
+  background-color: @func-color-warn-light;
+}
+
+/** 警告-淡色 */
+// @func-color-warn-pale: #fffbe6;
+.func-color-warn-pale {
+  background-color: @func-color-warn-pale;
+}
+
+/** 错误-正常 */
+// @func-color-error: #ff4d4f;
+.func-color-error {
+  background-color: @func-color-error;
+}
+.color-error {
+  color: @func-color-error;
+}
+
+/** 错误-浅色 */
+// @func-color-error-light: #ffa39e;
+.func-color-error-light {
+  background-color: @func-color-error-light;
+}
+
+/** 错误-淡色 */
+// @func-color-error-pale: #fff1f0;
+.func-color-error-pale {
+  background-color: @func-color-error-pale;
+}
+
+/*
+//////////////////////////////
+/// 「 盒子 」           
+//////////////////////////////
+*/
+
+/** 默认圆角 */
+// @rounded: 4px
+.rounded {
+  border-radius: @rounded;
+}
+
+/*
+//////////////////////////////
+/// 「 Antd控件 」           
+//// 
+*/
+
+/** 清除点击效果 */
+button[ant-click-animating-without-extra-node]:after {
+  border: 0 none;
+  opacity: 0;
+  animation: none 0 ease 0 1 normal;
+}

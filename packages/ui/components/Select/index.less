@@ -1,0 +1,23 @@
+@import "../../style/index.less";
+
+.l-select {
+  /** 选中效果 */
+  .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+    border-color: @theme-color-button;
+  }
+  /** 聚焦效果 */
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border-color: @theme-color-button;
+    box-shadow: none;
+  }
+}
+
+/** 下拉容器 */
+.dropdown-container {
+  /** 选中样式 */
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    .text-color-button;
+    .theme-color-dropdown;
+  }
+}

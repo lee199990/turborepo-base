@@ -1,0 +1,17 @@
+{
+  "extends": "@jmrepo/tsconfig/react-library.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true
+  },
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*"
+  ]
+}

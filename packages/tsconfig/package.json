@@ -1,0 +1,6 @@
+{
+  "name": "@jmrepo/tsconfig",
+  "version": "2.0.0",
+  "description": "tsconfig 基础配置",
+  "private": true
+}

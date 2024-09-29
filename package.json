@@ -1,0 +1,77 @@
+{
+  "packageManager": "pnpm@8.6.10",
+  "name": "@jmrepo/turborepo-base",
+  "version": "1.0.5",
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --concurrency 12",
+    "gen": "pnpm exec bin\\gen\\generator",
+    "dev:main": "turbo run dev --filter main",
+    "build:main": "turbo run build --filter main",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "lib:publish": "changeset publish --registry=http://nexus.jinma.tech/repository/npm-jm/",
+    "lib:remove": "npm unpublish --force"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.jinma.tech/repository/npm-jm/"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.12.2",
+    "@changesets/cli": "^2.27.1",
+    "@cypress/code-coverage": "^3.12.17",
+    "@eslint/js": "^9.0.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@jmrepo/tsconfig": "workspace:*",
+    "@jmrepo/eslint-config": "workspace:*",
+    "@types/fs-extra": "^11.0.2",
+    "@types/geojson": "^7946.0.13",
+    "@types/lodash-es": "^4.17.12",
+    "@types/proj4": "^2.5.5",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-test-renderer": "^18.0.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "cypress": "^13.6.2",
+    "cypress-mochawesome-reporter": "^3.8.0",
+    "eslint": "^8.57.0",
+    "nyc": "^15.1.0",
+    "prettier": "^3.0.3",
+    "react-test-renderer": "^18.2.0",
+    "sass": "^1.66.1",
+    "tslib": "^2.6.2",
+    "turbo": "latest",
+    "typedoc": "^0.25.4",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typescript": "^5.2.2",
+    "vite-plugin-dts": "^3.7.0",
+    "vite-plugin-istanbul": "^5.0.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@turf/turf": "^6.5.0",
+    "@types/node": "^20.5.2",
+    "antd": "^5.9.0",
+    "axios": "^1.6.2",
+    "fast-xml-parser": "^4.3.2",
+    "fs-extra": "^11.1.1",
+    "geojson": "^0.5.0",
+    "lodash-es": "^4.17.21",
+    "proj4": "^2.9.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.15.0",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1",
+    "vite": "5.0.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
